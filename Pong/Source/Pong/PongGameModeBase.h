@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Copywrite Matthew Battison 2018 - 2019
 
 #pragma once
 

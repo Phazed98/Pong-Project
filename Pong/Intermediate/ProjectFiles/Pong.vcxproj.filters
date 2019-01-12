@@ -42,4 +42,20 @@
       <Filter>Source\Pong</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\Pong\PaddlePawn.h">
+      <Filter>Source\Pong</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Pong\PongBall.h">
+      <Filter>Source\Pong</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Pong\PaddlePawn.cpp">
+      <Filter>Source\Pong</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Pong\PongBall.cpp">
+      <Filter>Source\Pong</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

@@ -1,0 +1,21 @@
+Alright so this is technically a working pong game now :)
+
+GameMode Setup
+ - Actor Positioning
+ - Resetting
+ - Scoring
+
+Paddle - Ball Collisions
+ - Track these accuratly
+ - Make sure it is robust
+
+Ball
+ - Wall collision detection
+ - Paddle collision
+ - Speed Changes
+ - Initial Velocity Randomize for fairness
+
+UI
+
+AI
+

@@ -1,5 +1,35 @@
-﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Matthew\Documents\GitHub\UnrealEngine).
+﻿  Performing full C++ include scan (building a new target)
+  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Matthew\Documents\GitHub\UnrealEngine).
   Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Matthew\Documents\GitHub\Pong-Project).
+  Creating makefile for PongEditor (no existing makefile)
+  Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.17763.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building UnrealHeaderTool...
+  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Matthew\Documents\GitHub\UnrealEngine).
   Target is up to date
-  Deploying PongEditor Win64 Development...
-  Total build time: 5.47 seconds (NoActionsToExecute executor: 0.00 seconds)
+  Total build time: 0.78 seconds (NoActionsToExecute executor: 0.00 seconds)
+  Parsing headers for PongEditor
+    Running UnrealHeaderTool "C:\Users\Matthew\Documents\GitHub\Pong-Project\Pong\Pong.uproject" "C:\Users\Matthew\Documents\GitHub\Pong-Project\Pong\Intermediate\Build\Win64\PongEditor\DebugGame\PongEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors
+  Reflection code generated for PongEditor in 8.6203015 seconds
+  Building 15 actions with 12 processes...
+    [1/15] PCLaunch.rc
+    [2/15] Pong.init.gen.cpp
+    [3/15] Pong.cpp
+    [4/15] PongGameModeBase.cpp
+    [5/15] PongBall.cpp
+    [6/15] PongBall.gen.cpp
+    [7/15] PongGameModeBase.gen.cpp
+    [8/15] PaddlePawn.gen.cpp
+    [9/15] PaddlePawn.cpp
+    [10/15] UE4Editor-Pong-Win64-DebugGame.lib
+       Creating library C:\Users\Matthew\Documents\GitHub\Pong-Project\Pong\Intermediate\Build\Win64\UE4Editor\DebugGame\Pong\UE4Editor-Pong-Win64-DebugGame.lib and object C:\Users\Matthew\Documents\GitHub\Pong-Project\Pong\Intermediate\Build\Win64\UE4Editor\DebugGame\Pong\UE4Editor-Pong-Win64-DebugGame.exp
+    [11/15] UE4Editor-Pong-Win64-DebugGame.dll
+       Creating library C:\Users\Matthew\Documents\GitHub\Pong-Project\Pong\Intermediate\Build\Win64\UE4Editor\DebugGame\Pong\UE4Editor-Pong-Win64-DebugGame.suppressed.lib and object C:\Users\Matthew\Documents\GitHub\Pong-Project\Pong\Intermediate\Build\Win64\UE4Editor\DebugGame\Pong\UE4Editor-Pong-Win64-DebugGame.suppressed.exp
+    [12/15] Module.Launch.cpp
+    [13/15] UE4Editor-Win64-DebugGame.lib
+       Creating library C:\Users\Matthew\Documents\GitHub\UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\DebugGame\UE4Editor-Win64-DebugGame.lib and object C:\Users\Matthew\Documents\GitHub\UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\DebugGame\UE4Editor-Win64-DebugGame.exp
+    [14/15] UE4Editor-Win64-DebugGame.exe
+       Creating library C:\Users\Matthew\Documents\GitHub\UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\DebugGame\UE4Editor-Win64-DebugGame.suppressed.lib and object C:\Users\Matthew\Documents\GitHub\UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\DebugGame\UE4Editor-Win64-DebugGame.suppressed.exp
+    [15/15] UE4Editor-Win64-DebugGame-Cmd.exe
+       Creating library C:\Users\Matthew\Documents\GitHub\UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\DebugGame\UE4Editor-Win64-DebugGame-Cmd.suppressed.lib and object C:\Users\Matthew\Documents\GitHub\UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\DebugGame\UE4Editor-Win64-DebugGame-Cmd.suppressed.exp
+  Deploying PongEditor Win64 DebugGame...
+  Total build time: 49.27 seconds (Parallel executor: 26.22 seconds)
