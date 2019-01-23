@@ -2,6 +2,7 @@
 
 #include "PongBall.h"
 
+#include "PongGameModeBase.h"
 #include "Components/StaticMeshComponent.h"
 
 // Sets default values
@@ -63,6 +64,13 @@ void APongBall::Tick(float DeltaTime)
 	if (YDistanceFromCenter > 1600.0f)
 	{
 		InvertYMovement();
+		if (UWorld* World = GetWorld())
+		{
+			if (APongGameModeBase* PongGame = Cast<APongGameModeBase>(World->GetAuthGameMode()))
+			{
+				PongGame->RestartPongGame();
+			}
+		}
 	}
 }
 

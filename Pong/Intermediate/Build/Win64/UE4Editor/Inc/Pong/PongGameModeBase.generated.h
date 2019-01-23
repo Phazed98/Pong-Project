@@ -59,7 +59,13 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APongGameModeBase); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APongGameModeBase)
 
 
-#define Pong_Source_Pong_PongGameModeBase_h_15_PRIVATE_PROPERTY_OFFSET
+#define Pong_Source_Pong_PongGameModeBase_h_15_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__PaddlePawns() { return STRUCT_OFFSET(APongGameModeBase, PaddlePawns); } \
+	FORCEINLINE static uint32 __PPO__Balls() { return STRUCT_OFFSET(APongGameModeBase, Balls); } \
+	FORCEINLINE static uint32 __PPO__BackGroundMeshActor() { return STRUCT_OFFSET(APongGameModeBase, BackGroundMeshActor); } \
+	FORCEINLINE static uint32 __PPO__CameraActor() { return STRUCT_OFFSET(APongGameModeBase, CameraActor); }
+
+
 #define Pong_Source_Pong_PongGameModeBase_h_12_PROLOG
 #define Pong_Source_Pong_PongGameModeBase_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

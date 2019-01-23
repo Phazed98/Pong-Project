@@ -19,7 +19,7 @@ void EmptyLinkFunctionForGeneratedCodePong_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/Pong",
 				PKG_CompiledIn | 0x00000000,
-				0xA23A3984,
+				0xDFEEF3B0,
 				0xC42DAF87,
 				nullptr, 0,
 				METADATA_PARAMS(nullptr, 0)

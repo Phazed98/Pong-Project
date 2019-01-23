@@ -17,6 +17,10 @@ void EmptyLinkFunctionForGeneratedCodePongGameModeBase() {}
 	PONG_API UClass* Z_Construct_UClass_APongGameModeBase();
 	ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
 	UPackage* Z_Construct_UPackage__Script_Pong();
+	ENGINE_API UClass* Z_Construct_UClass_ACameraActor_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_AStaticMeshActor_NoRegister();
+	PONG_API UClass* Z_Construct_UClass_APongBall_NoRegister();
+	PONG_API UClass* Z_Construct_UClass_APaddlePawn_NoRegister();
 // End Cross Module References
 	void APongGameModeBase::StaticRegisterNativesAPongGameModeBase()
 	{
@@ -31,6 +35,25 @@ void EmptyLinkFunctionForGeneratedCodePongGameModeBase() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CameraActor_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CameraActor;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BackGroundMeshActor_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_BackGroundMeshActor;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Balls_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_Balls;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Balls_Inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PaddlePawns_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_PaddlePawns;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_PaddlePawns_Inner;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -46,6 +69,40 @@ void EmptyLinkFunctionForGeneratedCodePongGameModeBase() {}
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APongGameModeBase_Statics::NewProp_CameraActor_MetaData[] = {
+		{ "ModuleRelativePath", "PongGameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APongGameModeBase_Statics::NewProp_CameraActor = { UE4CodeGen_Private::EPropertyClass::Object, "CameraActor", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0020080000002000, 1, nullptr, STRUCT_OFFSET(APongGameModeBase, CameraActor), Z_Construct_UClass_ACameraActor_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APongGameModeBase_Statics::NewProp_CameraActor_MetaData, ARRAY_COUNT(Z_Construct_UClass_APongGameModeBase_Statics::NewProp_CameraActor_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APongGameModeBase_Statics::NewProp_BackGroundMeshActor_MetaData[] = {
+		{ "ModuleRelativePath", "PongGameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APongGameModeBase_Statics::NewProp_BackGroundMeshActor = { UE4CodeGen_Private::EPropertyClass::Object, "BackGroundMeshActor", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0020080000002000, 1, nullptr, STRUCT_OFFSET(APongGameModeBase, BackGroundMeshActor), Z_Construct_UClass_AStaticMeshActor_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APongGameModeBase_Statics::NewProp_BackGroundMeshActor_MetaData, ARRAY_COUNT(Z_Construct_UClass_APongGameModeBase_Statics::NewProp_BackGroundMeshActor_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APongGameModeBase_Statics::NewProp_Balls_MetaData[] = {
+		{ "ModuleRelativePath", "PongGameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_APongGameModeBase_Statics::NewProp_Balls = { UE4CodeGen_Private::EPropertyClass::Array, "Balls", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0020080000002000, 1, nullptr, STRUCT_OFFSET(APongGameModeBase, Balls), METADATA_PARAMS(Z_Construct_UClass_APongGameModeBase_Statics::NewProp_Balls_MetaData, ARRAY_COUNT(Z_Construct_UClass_APongGameModeBase_Statics::NewProp_Balls_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APongGameModeBase_Statics::NewProp_Balls_Inner = { UE4CodeGen_Private::EPropertyClass::Object, "Balls", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0000000000000000, 1, nullptr, 0, Z_Construct_UClass_APongBall_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APongGameModeBase_Statics::NewProp_PaddlePawns_MetaData[] = {
+		{ "ModuleRelativePath", "PongGameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_APongGameModeBase_Statics::NewProp_PaddlePawns = { UE4CodeGen_Private::EPropertyClass::Array, "PaddlePawns", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0020080000002000, 1, nullptr, STRUCT_OFFSET(APongGameModeBase, PaddlePawns), METADATA_PARAMS(Z_Construct_UClass_APongGameModeBase_Statics::NewProp_PaddlePawns_MetaData, ARRAY_COUNT(Z_Construct_UClass_APongGameModeBase_Statics::NewProp_PaddlePawns_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APongGameModeBase_Statics::NewProp_PaddlePawns_Inner = { UE4CodeGen_Private::EPropertyClass::Object, "PaddlePawns", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0000000000000000, 1, nullptr, 0, Z_Construct_UClass_APaddlePawn_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APongGameModeBase_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APongGameModeBase_Statics::NewProp_CameraActor,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APongGameModeBase_Statics::NewProp_BackGroundMeshActor,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APongGameModeBase_Statics::NewProp_Balls,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APongGameModeBase_Statics::NewProp_Balls_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APongGameModeBase_Statics::NewProp_PaddlePawns,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APongGameModeBase_Statics::NewProp_PaddlePawns_Inner,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_APongGameModeBase_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<APongGameModeBase>::IsAbstract,
 	};
@@ -54,7 +111,7 @@ void EmptyLinkFunctionForGeneratedCodePongGameModeBase() {}
 		DependentSingletons, ARRAY_COUNT(DependentSingletons),
 		0x009002A8u,
 		nullptr, 0,
-		nullptr, 0,
+		Z_Construct_UClass_APongGameModeBase_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UClass_APongGameModeBase_Statics::PropPointers),
 		nullptr,
 		&StaticCppClassTypeInfo,
 		nullptr, 0,
@@ -69,7 +126,7 @@ void EmptyLinkFunctionForGeneratedCodePongGameModeBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APongGameModeBase, 4188995766);
+	IMPLEMENT_CLASS(APongGameModeBase, 238755246);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_APongGameModeBase(Z_Construct_UClass_APongGameModeBase, &APongGameModeBase::StaticClass, TEXT("/Script/Pong"), TEXT("APongGameModeBase"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APongGameModeBase);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -101,11 +101,6 @@ void APaddlePawn::Tick(float DeltaTime)
 				}
 			}
 		}
-	
-		//if (AGameModeBase* GameMode = World->GetAuthGameMode())
-		//{
-		//
-		//}
 	}
 }
 
