@@ -4,42 +4,42 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
+
 #include "PaddlePawn.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable, CollapseCategories, HideCategories = (Lighting, Rendering, "Component Replication", Replication, Input, Actor, HLOD, Mobile, "Asset User Data"))
 class PONG_API APaddlePawn : public APawn
 {
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this pawn's properties
+
+	//Default Constructor
 	APaddlePawn();
 
-	/** The main mesh associated with this Paddle (optional sub-object). */
+	// The main mesh associated with this Paddle (optional sub-object).
 	UPROPERTY(Category = PaddleMesh, VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* Mesh;
 
-protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	virtual FVector GetVelocity() const override;
 
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	void SetWantsToMoveUp();
+	void SetWantsToMoveDown();
 
-	void OnMoveUpPressed();
-	void OnMoveDownPressed();
-
-	void OnMoveUpReleased();
-	void OnMoveDownReleased();
+	void ClearWantsToMoveUp();
+	void ClearWantsToMoveDown();
 
 protected:
 
 	UPROPERTY(EditDefaultsOnly, Category = Movement)
 	float DefaultMovementSpeed;
+
+	void UpdatePaddleMovement(float DeltaTime);
 
 private:
 

@@ -69,8 +69,10 @@ void EmptyLinkFunctionForGeneratedCodePaddlePawn() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APaddlePawn_Statics::Class_MetaDataParams[] = {
-		{ "HideCategories", "Navigation" },
+		{ "BlueprintType", "true" },
+		{ "HideCategories", "Lighting Rendering Component Replication Replication Input Actor HLOD Mobile Asset User Data Navigation" },
 		{ "IncludePath", "PaddlePawn.h" },
+		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "PaddlePawn.h" },
 	};
 #endif
@@ -137,7 +139,7 @@ void EmptyLinkFunctionForGeneratedCodePaddlePawn() {}
 	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_APaddlePawn_Statics::ClassParams = {
 		&APaddlePawn::StaticClass,
 		DependentSingletons, ARRAY_COUNT(DependentSingletons),
-		0x009000A0u,
+		0x009020A0u,
 		nullptr, 0,
 		Z_Construct_UClass_APaddlePawn_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UClass_APaddlePawn_Statics::PropPointers),
 		nullptr,
@@ -154,7 +156,7 @@ void EmptyLinkFunctionForGeneratedCodePaddlePawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APaddlePawn, 2056003217);
+	IMPLEMENT_CLASS(APaddlePawn, 1747203854);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_APaddlePawn(Z_Construct_UClass_APaddlePawn, &APaddlePawn::StaticClass, TEXT("/Script/Pong"), TEXT("APaddlePawn"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APaddlePawn);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

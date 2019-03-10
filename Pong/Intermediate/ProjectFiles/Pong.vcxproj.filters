@@ -49,12 +49,30 @@
     <ClInclude Include="..\..\Source\Pong\PongBall.h">
       <Filter>Source\Pong</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Pong\PongPlayerController.h">
+      <Filter>Source\Pong</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Pong\PongAIController.h">
+      <Filter>Source\Pong</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Pong\PongHUD.h">
+      <Filter>Source\Pong</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\Pong\PaddlePawn.cpp">
       <Filter>Source\Pong</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Pong\PongBall.cpp">
+      <Filter>Source\Pong</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Pong\PongPlayerController.cpp">
+      <Filter>Source\Pong</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Pong\PongAIController.cpp">
+      <Filter>Source\Pong</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Pong\PongHUD.cpp">
       <Filter>Source\Pong</Filter>
     </ClCompile>
   </ItemGroup>

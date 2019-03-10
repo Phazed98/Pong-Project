@@ -4,36 +4,49 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+
 #include "PongBall.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable, CollapseCategories, HideCategories = (Lighting, Rendering, "Component Replication", Replication, Input, Actor, HLOD, Mobile, "Asset User Data"))
 class PONG_API APongBall : public AActor
 {
 	GENERATED_BODY()
 	
 public:	
-	// Sets default values for this actor's properties
+
+	//Default Constructor
 	APongBall();
 
-	/** The main mesh associated with this Paddle (optional sub-object). */
+	// The main mesh associated with this Paddle (optional sub-object).
 	UPROPERTY(Category = BallMesh, VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* Mesh;
 
-protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	void InvertXMovement();
 	void InvertYMovement();
+	void ResetMovementSpeed();
 
 protected:
 
+	void UpdateBallMovement(float DeltaTime);
+	void HandleBallCollisions();
+
 	UPROPERTY(EditDefaultsOnly, Category = Movement)
 	float DefaultMovementSpeed;
+
+	UPROPERTY(EditDefaultsOnly, Category = Movement)
+	float PaddleContactFriction;
+
+	UPROPERTY(EditDefaultsOnly, Category = Movement)
+	FVector2D PaddleCollisionSpeedIncrease;
+
+	UPROPERTY(EditDefaultsOnly, Category = Movement)
+	FVector2D InitialMagnitudeYRange;
 
 private:
 

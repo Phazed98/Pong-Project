@@ -1187,6 +1187,12 @@
     <NMakeOutput>..\..\Binaries\HTML5\Pong-HTML5-Test.js</NMakeOutput>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\Pong\PongAIController.cpp" />
+    <ClCompile Include="..\..\Source\Pong\PongHUD.cpp" />
+    <ClCompile Include="..\..\Source\Pong\PongPlayerController.cpp" />
+    <ClInclude Include="..\..\Source\Pong\PongAIController.h" />
+    <ClInclude Include="..\..\Source\Pong\PongHUD.h" />
+    <ClInclude Include="..\..\Source\Pong\PongPlayerController.h" />
     <None Include="..\..\Pong.uproject" />
     <None Include="..\..\Source\Pong.Target.cs" />
     <None Include="..\..\Source\PongEditor.Target.cs" />

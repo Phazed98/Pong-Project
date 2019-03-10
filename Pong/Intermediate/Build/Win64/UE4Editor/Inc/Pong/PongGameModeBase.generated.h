@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PONG_PongGameModeBase_generated_h
 
-#define Pong_Source_Pong_PongGameModeBase_h_15_RPC_WRAPPERS
-#define Pong_Source_Pong_PongGameModeBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define Pong_Source_Pong_PongGameModeBase_h_15_INCLASS_NO_PURE_DECLS \
+#define Pong_Source_Pong_PongGameModeBase_h_21_RPC_WRAPPERS
+#define Pong_Source_Pong_PongGameModeBase_h_21_RPC_WRAPPERS_NO_PURE_DECLS
+#define Pong_Source_Pong_PongGameModeBase_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPongGameModeBase(); \
 	friend struct Z_Construct_UClass_APongGameModeBase_Statics; \
@@ -24,7 +24,7 @@ public: \
 	DECLARE_SERIALIZER(APongGameModeBase)
 
 
-#define Pong_Source_Pong_PongGameModeBase_h_15_INCLASS \
+#define Pong_Source_Pong_PongGameModeBase_h_21_INCLASS \
 private: \
 	static void StaticRegisterNativesAPongGameModeBase(); \
 	friend struct Z_Construct_UClass_APongGameModeBase_Statics; \
@@ -33,7 +33,7 @@ public: \
 	DECLARE_SERIALIZER(APongGameModeBase)
 
 
-#define Pong_Source_Pong_PongGameModeBase_h_15_STANDARD_CONSTRUCTORS \
+#define Pong_Source_Pong_PongGameModeBase_h_21_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API APongGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APongGameModeBase) \
@@ -46,7 +46,7 @@ private: \
 public:
 
 
-#define Pong_Source_Pong_PongGameModeBase_h_15_ENHANCED_CONSTRUCTORS \
+#define Pong_Source_Pong_PongGameModeBase_h_21_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API APongGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -59,32 +59,33 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APongGameModeBase); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APongGameModeBase)
 
 
-#define Pong_Source_Pong_PongGameModeBase_h_15_PRIVATE_PROPERTY_OFFSET \
+#define Pong_Source_Pong_PongGameModeBase_h_21_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__PaddlePawns() { return STRUCT_OFFSET(APongGameModeBase, PaddlePawns); } \
 	FORCEINLINE static uint32 __PPO__Balls() { return STRUCT_OFFSET(APongGameModeBase, Balls); } \
 	FORCEINLINE static uint32 __PPO__BackGroundMeshActor() { return STRUCT_OFFSET(APongGameModeBase, BackGroundMeshActor); } \
-	FORCEINLINE static uint32 __PPO__CameraActor() { return STRUCT_OFFSET(APongGameModeBase, CameraActor); }
+	FORCEINLINE static uint32 __PPO__CameraActor() { return STRUCT_OFFSET(APongGameModeBase, CameraActor); } \
+	FORCEINLINE static uint32 __PPO__PlayerScores() { return STRUCT_OFFSET(APongGameModeBase, PlayerScores); }
 
 
-#define Pong_Source_Pong_PongGameModeBase_h_12_PROLOG
-#define Pong_Source_Pong_PongGameModeBase_h_15_GENERATED_BODY_LEGACY \
+#define Pong_Source_Pong_PongGameModeBase_h_18_PROLOG
+#define Pong_Source_Pong_PongGameModeBase_h_21_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Pong_Source_Pong_PongGameModeBase_h_15_PRIVATE_PROPERTY_OFFSET \
-	Pong_Source_Pong_PongGameModeBase_h_15_RPC_WRAPPERS \
-	Pong_Source_Pong_PongGameModeBase_h_15_INCLASS \
-	Pong_Source_Pong_PongGameModeBase_h_15_STANDARD_CONSTRUCTORS \
+	Pong_Source_Pong_PongGameModeBase_h_21_PRIVATE_PROPERTY_OFFSET \
+	Pong_Source_Pong_PongGameModeBase_h_21_RPC_WRAPPERS \
+	Pong_Source_Pong_PongGameModeBase_h_21_INCLASS \
+	Pong_Source_Pong_PongGameModeBase_h_21_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Pong_Source_Pong_PongGameModeBase_h_15_GENERATED_BODY \
+#define Pong_Source_Pong_PongGameModeBase_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Pong_Source_Pong_PongGameModeBase_h_15_PRIVATE_PROPERTY_OFFSET \
-	Pong_Source_Pong_PongGameModeBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	Pong_Source_Pong_PongGameModeBase_h_15_INCLASS_NO_PURE_DECLS \
-	Pong_Source_Pong_PongGameModeBase_h_15_ENHANCED_CONSTRUCTORS \
+	Pong_Source_Pong_PongGameModeBase_h_21_PRIVATE_PROPERTY_OFFSET \
+	Pong_Source_Pong_PongGameModeBase_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	Pong_Source_Pong_PongGameModeBase_h_21_INCLASS_NO_PURE_DECLS \
+	Pong_Source_Pong_PongGameModeBase_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
