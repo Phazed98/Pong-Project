@@ -64,7 +64,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APongGameModeBase); \
 	FORCEINLINE static uint32 __PPO__Balls() { return STRUCT_OFFSET(APongGameModeBase, Balls); } \
 	FORCEINLINE static uint32 __PPO__BackGroundMeshActor() { return STRUCT_OFFSET(APongGameModeBase, BackGroundMeshActor); } \
 	FORCEINLINE static uint32 __PPO__CameraActor() { return STRUCT_OFFSET(APongGameModeBase, CameraActor); } \
-	FORCEINLINE static uint32 __PPO__PlayerScores() { return STRUCT_OFFSET(APongGameModeBase, PlayerScores); }
+	FORCEINLINE static uint32 __PPO__PlayerScores() { return STRUCT_OFFSET(APongGameModeBase, PlayerScores); } \
+	FORCEINLINE static uint32 __PPO__GameBounds() { return STRUCT_OFFSET(APongGameModeBase, GameBounds); }
 
 
 #define Pong_Source_Pong_PongGameModeBase_h_18_PROLOG

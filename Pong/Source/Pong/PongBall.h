@@ -31,6 +31,10 @@ public:
 	void InvertYMovement();
 	void ResetMovementSpeed();
 
+	FVector GetBallBounds() { return BallBounds; }
+
+	void SetMovementBounds(FVector MinBounds, FVector MaxBounds);
+
 protected:
 
 	void UpdateBallMovement(float DeltaTime);
@@ -58,4 +62,13 @@ private:
 
 	UPROPERTY(Transient)
 	float MovementSpeed;
+
+	UPROPERTY(Transient)
+	FVector BallBounds;
+
+	UPROPERTY(Transient)
+	FVector MinMovementBounds;
+
+	UPROPERTY(Transient)
+	FVector MaxMovementBounds;
 };

@@ -3,6 +3,7 @@
 #include "PongGameModeBase.h"
 
 #include "Camera/CameraActor.h"
+#include "Camera/CameraComponent.h"
 #include "Engine/StaticMeshActor.h"
 #include "Kismet/GameplayStatics.h"
 #include "PaddlePawn.h"
@@ -65,26 +66,40 @@ void APongGameModeBase::InitGame(const FString& MapName, const FString& Options,
 
 void APongGameModeBase::RestartPongGame()
 {
-	//Basically everything is 0 offset so alignb it all to 0 
+	FVector BoundsOrigin = FVector::ZeroVector;
+	FVector BoundsExtent = FVector::ZeroVector;
+
+	//Basically everything is 0 offset so align it all to 0 
 	if (BackGroundMeshActor != nullptr)
 	{
-		BackGroundMeshActor->SetActorLocation(FVector::ZeroVector);
+		BackGroundMeshActor->SetActorLocation(FVector::ZeroVector); 
+		BackGroundMeshActor->GetActorBounds(false, BoundsOrigin, BoundsExtent); // Note, This origin is not the actor location, it finds the origin of the extents
 	}
 
 	if (PaddlePawns[0] != nullptr)
 	{
-		PaddlePawns[0]->SetActorLocation(FVector(800.0f, 50.0f, 0.0f)); //TODO: Get Rid  of magic Numbers
+		PaddlePawns[0]->SetActorLocation(FVector(BoundsOrigin.X, BoundsOrigin.Y - BoundsExtent.Y, 0.0f));
+		PaddlePawns[0]->SetMovementBounds(BoundsOrigin.X - BoundsExtent.X , BoundsOrigin.X + BoundsExtent.X);
 	}
 
 	if (PaddlePawns[1] != nullptr)
 	{
-		PaddlePawns[1]->SetActorLocation(FVector(800.0f, 2750.0f, 0.0f)); //TODO: Get Rid  of magic Numbers
+		PaddlePawns[1]->SetActorLocation(FVector(BoundsOrigin.X, BoundsOrigin.Y + BoundsExtent.Y, 0.0f));
+		PaddlePawns[1]->SetMovementBounds(BoundsOrigin.X - BoundsExtent.X, BoundsOrigin.X + BoundsExtent.X);
 	}
 
 	if (Balls[0] != nullptr)
 	{
-		Balls[0]->SetActorLocation(FVector(800.0f, 1400.0f, 0.0f)); //TODO: Get Rid  of magic Numbers
+		Balls[0]->SetActorLocation(FVector(BoundsOrigin.X, BoundsOrigin.Y, 0.0f));
 		Balls[0]->ResetMovementSpeed();
+		Balls[0]->SetMovementBounds(BoundsOrigin - BoundsExtent, BoundsOrigin + BoundsExtent);
+	}
+
+	if (CameraActor && CameraActor->GetCameraComponent())
+	{
+		CameraActor->SetActorLocation(FVector(BoundsOrigin.X, BoundsOrigin.Y, 1400.0f));
+		CameraActor->GetCameraComponent()->SetOrthoWidth(BoundsExtent.Y * 2.0f);
+		CameraActor->GetCameraComponent()->SetAspectRatio(BoundsExtent.Y / BoundsExtent.X);
 	}
 }
 

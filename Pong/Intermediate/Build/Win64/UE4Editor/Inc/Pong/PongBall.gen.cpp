@@ -35,6 +35,18 @@ void EmptyLinkFunctionForGeneratedCodePongBall() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxMovementBounds_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MaxMovementBounds;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MinMovementBounds_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MinMovementBounds;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BallBounds_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_BallBounds;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MovementSpeed_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MovementSpeed;
@@ -83,6 +95,24 @@ void EmptyLinkFunctionForGeneratedCodePongBall() {}
 		{ "ModuleRelativePath", "PongBall.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APongBall_Statics::NewProp_MaxMovementBounds_MetaData[] = {
+		{ "ModuleRelativePath", "PongBall.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_APongBall_Statics::NewProp_MaxMovementBounds = { UE4CodeGen_Private::EPropertyClass::Struct, "MaxMovementBounds", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0040000000002000, 1, nullptr, STRUCT_OFFSET(APongBall, MaxMovementBounds), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_APongBall_Statics::NewProp_MaxMovementBounds_MetaData, ARRAY_COUNT(Z_Construct_UClass_APongBall_Statics::NewProp_MaxMovementBounds_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APongBall_Statics::NewProp_MinMovementBounds_MetaData[] = {
+		{ "ModuleRelativePath", "PongBall.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_APongBall_Statics::NewProp_MinMovementBounds = { UE4CodeGen_Private::EPropertyClass::Struct, "MinMovementBounds", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0040000000002000, 1, nullptr, STRUCT_OFFSET(APongBall, MinMovementBounds), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_APongBall_Statics::NewProp_MinMovementBounds_MetaData, ARRAY_COUNT(Z_Construct_UClass_APongBall_Statics::NewProp_MinMovementBounds_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APongBall_Statics::NewProp_BallBounds_MetaData[] = {
+		{ "ModuleRelativePath", "PongBall.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_APongBall_Statics::NewProp_BallBounds = { UE4CodeGen_Private::EPropertyClass::Struct, "BallBounds", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0040000000002000, 1, nullptr, STRUCT_OFFSET(APongBall, BallBounds), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_APongBall_Statics::NewProp_BallBounds_MetaData, ARRAY_COUNT(Z_Construct_UClass_APongBall_Statics::NewProp_BallBounds_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APongBall_Statics::NewProp_MovementSpeed_MetaData[] = {
 		{ "ModuleRelativePath", "PongBall.h" },
@@ -140,6 +170,9 @@ void EmptyLinkFunctionForGeneratedCodePongBall() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APongBall_Statics::NewProp_Mesh = { UE4CodeGen_Private::EPropertyClass::Object, "Mesh", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x00100000000a001d, 1, nullptr, STRUCT_OFFSET(APongBall, Mesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APongBall_Statics::NewProp_Mesh_MetaData, ARRAY_COUNT(Z_Construct_UClass_APongBall_Statics::NewProp_Mesh_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APongBall_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APongBall_Statics::NewProp_MaxMovementBounds,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APongBall_Statics::NewProp_MinMovementBounds,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APongBall_Statics::NewProp_BallBounds,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APongBall_Statics::NewProp_MovementSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APongBall_Statics::NewProp_InitialLocation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APongBall_Statics::NewProp_MovementDirection,
@@ -172,7 +205,7 @@ void EmptyLinkFunctionForGeneratedCodePongBall() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APongBall, 3880988309);
+	IMPLEMENT_CLASS(APongBall, 739767335);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_APongBall(Z_Construct_UClass_APongBall, &APongBall::StaticClass, TEXT("/Script/Pong"), TEXT("APongBall"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APongBall);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

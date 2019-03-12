@@ -64,7 +64,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APongBall); \
 	FORCEINLINE static uint32 __PPO__InitialMagnitudeYRange() { return STRUCT_OFFSET(APongBall, InitialMagnitudeYRange); } \
 	FORCEINLINE static uint32 __PPO__MovementDirection() { return STRUCT_OFFSET(APongBall, MovementDirection); } \
 	FORCEINLINE static uint32 __PPO__InitialLocation() { return STRUCT_OFFSET(APongBall, InitialLocation); } \
-	FORCEINLINE static uint32 __PPO__MovementSpeed() { return STRUCT_OFFSET(APongBall, MovementSpeed); }
+	FORCEINLINE static uint32 __PPO__MovementSpeed() { return STRUCT_OFFSET(APongBall, MovementSpeed); } \
+	FORCEINLINE static uint32 __PPO__BallBounds() { return STRUCT_OFFSET(APongBall, BallBounds); } \
+	FORCEINLINE static uint32 __PPO__MinMovementBounds() { return STRUCT_OFFSET(APongBall, MinMovementBounds); } \
+	FORCEINLINE static uint32 __PPO__MaxMovementBounds() { return STRUCT_OFFSET(APongBall, MaxMovementBounds); }
 
 
 #define Pong_Source_Pong_PongBall_h_10_PROLOG

@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodePongGameModeBase() {}
 	PONG_API UClass* Z_Construct_UClass_APongGameModeBase();
 	ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
 	UPackage* Z_Construct_UPackage__Script_Pong();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_ACameraActor_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_AStaticMeshActor_NoRegister();
 	PONG_API UClass* Z_Construct_UClass_APongBall_NoRegister();
@@ -35,6 +36,10 @@ void EmptyLinkFunctionForGeneratedCodePongGameModeBase() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GameBounds_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_GameBounds;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayerScores_MetaData[];
 #endif
@@ -75,6 +80,12 @@ void EmptyLinkFunctionForGeneratedCodePongGameModeBase() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APongGameModeBase_Statics::NewProp_GameBounds_MetaData[] = {
+		{ "ModuleRelativePath", "PongGameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_APongGameModeBase_Statics::NewProp_GameBounds = { UE4CodeGen_Private::EPropertyClass::Struct, "GameBounds", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0040000000002000, 1, nullptr, STRUCT_OFFSET(APongGameModeBase, GameBounds), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_APongGameModeBase_Statics::NewProp_GameBounds_MetaData, ARRAY_COUNT(Z_Construct_UClass_APongGameModeBase_Statics::NewProp_GameBounds_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APongGameModeBase_Statics::NewProp_PlayerScores_MetaData[] = {
 		{ "ModuleRelativePath", "PongGameModeBase.h" },
 	};
@@ -108,6 +119,7 @@ void EmptyLinkFunctionForGeneratedCodePongGameModeBase() {}
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_APongGameModeBase_Statics::NewProp_PaddlePawns = { UE4CodeGen_Private::EPropertyClass::Array, "PaddlePawns", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0040000000002000, 1, nullptr, STRUCT_OFFSET(APongGameModeBase, PaddlePawns), METADATA_PARAMS(Z_Construct_UClass_APongGameModeBase_Statics::NewProp_PaddlePawns_MetaData, ARRAY_COUNT(Z_Construct_UClass_APongGameModeBase_Statics::NewProp_PaddlePawns_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APongGameModeBase_Statics::NewProp_PaddlePawns_Inner = { UE4CodeGen_Private::EPropertyClass::Object, "PaddlePawns", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0000000000000000, 1, nullptr, 0, Z_Construct_UClass_APaddlePawn_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APongGameModeBase_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APongGameModeBase_Statics::NewProp_GameBounds,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APongGameModeBase_Statics::NewProp_PlayerScores,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APongGameModeBase_Statics::NewProp_PlayerScores_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APongGameModeBase_Statics::NewProp_CameraActor,
@@ -140,7 +152,7 @@ void EmptyLinkFunctionForGeneratedCodePongGameModeBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APongGameModeBase, 3827649924);
+	IMPLEMENT_CLASS(APongGameModeBase, 87353813);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_APongGameModeBase(Z_Construct_UClass_APongGameModeBase, &APongGameModeBase::StaticClass, TEXT("/Script/Pong"), TEXT("APongGameModeBase"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APongGameModeBase);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

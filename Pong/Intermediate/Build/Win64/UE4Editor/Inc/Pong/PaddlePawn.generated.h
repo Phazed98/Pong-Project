@@ -62,7 +62,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APaddlePawn); \
 	FORCEINLINE static uint32 __PPO__InitialLocation() { return STRUCT_OFFSET(APaddlePawn, InitialLocation); } \
 	FORCEINLINE static uint32 __PPO__MovementSpeed() { return STRUCT_OFFSET(APaddlePawn, MovementSpeed); } \
 	FORCEINLINE static uint32 __PPO__bWantsToMoveUp() { return STRUCT_OFFSET(APaddlePawn, bWantsToMoveUp); } \
-	FORCEINLINE static uint32 __PPO__bWantsToMoveDown() { return STRUCT_OFFSET(APaddlePawn, bWantsToMoveDown); }
+	FORCEINLINE static uint32 __PPO__bWantsToMoveDown() { return STRUCT_OFFSET(APaddlePawn, bWantsToMoveDown); } \
+	FORCEINLINE static uint32 __PPO__MinMovementBound() { return STRUCT_OFFSET(APaddlePawn, MinMovementBound); } \
+	FORCEINLINE static uint32 __PPO__MaxMovementBound() { return STRUCT_OFFSET(APaddlePawn, MaxMovementBound); }
 
 
 #define Pong_Source_Pong_PaddlePawn_h_10_PROLOG

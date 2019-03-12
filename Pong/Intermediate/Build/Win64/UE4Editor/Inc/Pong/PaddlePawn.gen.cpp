@@ -34,6 +34,14 @@ void EmptyLinkFunctionForGeneratedCodePaddlePawn() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxMovementBound_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxMovementBound;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MinMovementBound_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MinMovementBound;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bWantsToMoveDown_MetaData[];
 #endif
 		static void NewProp_bWantsToMoveDown_SetBit(void* Obj);
@@ -76,6 +84,18 @@ void EmptyLinkFunctionForGeneratedCodePaddlePawn() {}
 		{ "ModuleRelativePath", "PaddlePawn.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APaddlePawn_Statics::NewProp_MaxMovementBound_MetaData[] = {
+		{ "ModuleRelativePath", "PaddlePawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APaddlePawn_Statics::NewProp_MaxMovementBound = { UE4CodeGen_Private::EPropertyClass::Float, "MaxMovementBound", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0040000000002000, 1, nullptr, STRUCT_OFFSET(APaddlePawn, MaxMovementBound), METADATA_PARAMS(Z_Construct_UClass_APaddlePawn_Statics::NewProp_MaxMovementBound_MetaData, ARRAY_COUNT(Z_Construct_UClass_APaddlePawn_Statics::NewProp_MaxMovementBound_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APaddlePawn_Statics::NewProp_MinMovementBound_MetaData[] = {
+		{ "ModuleRelativePath", "PaddlePawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APaddlePawn_Statics::NewProp_MinMovementBound = { UE4CodeGen_Private::EPropertyClass::Float, "MinMovementBound", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0040000000002000, 1, nullptr, STRUCT_OFFSET(APaddlePawn, MinMovementBound), METADATA_PARAMS(Z_Construct_UClass_APaddlePawn_Statics::NewProp_MinMovementBound_MetaData, ARRAY_COUNT(Z_Construct_UClass_APaddlePawn_Statics::NewProp_MinMovementBound_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APaddlePawn_Statics::NewProp_bWantsToMoveDown_MetaData[] = {
 		{ "ModuleRelativePath", "PaddlePawn.h" },
@@ -126,6 +146,8 @@ void EmptyLinkFunctionForGeneratedCodePaddlePawn() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APaddlePawn_Statics::NewProp_Mesh = { UE4CodeGen_Private::EPropertyClass::Object, "Mesh", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x00100000000a001d, 1, nullptr, STRUCT_OFFSET(APaddlePawn, Mesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APaddlePawn_Statics::NewProp_Mesh_MetaData, ARRAY_COUNT(Z_Construct_UClass_APaddlePawn_Statics::NewProp_Mesh_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APaddlePawn_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APaddlePawn_Statics::NewProp_MaxMovementBound,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APaddlePawn_Statics::NewProp_MinMovementBound,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APaddlePawn_Statics::NewProp_bWantsToMoveDown,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APaddlePawn_Statics::NewProp_bWantsToMoveUp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APaddlePawn_Statics::NewProp_MovementSpeed,
@@ -156,7 +178,7 @@ void EmptyLinkFunctionForGeneratedCodePaddlePawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APaddlePawn, 1747203854);
+	IMPLEMENT_CLASS(APaddlePawn, 3220823292);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_APaddlePawn(Z_Construct_UClass_APaddlePawn, &APaddlePawn::StaticClass, TEXT("/Script/Pong"), TEXT("APaddlePawn"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APaddlePawn);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

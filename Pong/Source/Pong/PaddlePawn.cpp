@@ -39,7 +39,10 @@ void APaddlePawn::BeginPlay()
 
 	InitialLocation = GetActorLocation();
 
-	MovementSpeed = DefaultMovementSpeed;	
+	MovementSpeed = DefaultMovementSpeed;
+
+	FVector UnusedVector;
+	GetActorBounds(false, UnusedVector, PaddleBounds);
 }
 
 // Called every frame
@@ -57,11 +60,11 @@ void APaddlePawn::UpdatePaddleMovement(float DeltaTime)
 	const float XDistanceFromCenter = CurrentLocation.X - InitialLocation.X;
 
 	//Constrain the Movement to reasonable Distances from where we started
-	if (XDistanceFromCenter > 800.0f)
+	if (CurrentLocation.X + PaddleBounds.X > MaxMovementBound)
 	{
 		bWantsToMoveUp = false;
 	}
-	else if (XDistanceFromCenter < -800.0f)
+	else if (CurrentLocation.X - PaddleBounds.X < MinMovementBound)
 	{
 		bWantsToMoveDown = false;
 	}
@@ -107,4 +110,10 @@ void APaddlePawn::ClearWantsToMoveUp()
 void APaddlePawn::ClearWantsToMoveDown()
 {
 	bWantsToMoveDown = false;
+}
+
+void APaddlePawn::SetMovementBounds(float MinBound, float MaxBound)
+{
+	MinMovementBound = MinBound; 
+	MaxMovementBound = MaxBound;
 }

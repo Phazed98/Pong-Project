@@ -1,6 +1,7 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Matthew\Documents\GitHub\UnrealEngine).
+  Waiting for 'git status' command to complete
   Target is up to date
   Copying C:\Users\Matthew\Documents\GitHub\UnrealEngine\Engine\Binaries\Win64\ShaderCompileWorker.exe to C:\Users\Matthew\Documents\GitHub\UnrealEngine\Engine\Binaries\Win64\XGEControlWorker.exe
           1 file(s) copied.
   Deploying ShaderCompileWorker Win64 Development...
-  Total build time: 0.64 seconds (NoActionsToExecute executor: 0.00 seconds)
+  Total build time: 1.79 seconds (NoActionsToExecute executor: 0.00 seconds)

@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodePongHUD() {}
 	PONG_API UClass* Z_Construct_UClass_APongHUD();
 	ENGINE_API UClass* Z_Construct_UClass_AHUD();
 	UPackage* Z_Construct_UPackage__Script_Pong();
+	ENGINE_API UClass* Z_Construct_UClass_UFont_NoRegister();
 // End Cross Module References
 	void APongHUD::StaticRegisterNativesAPongHUD()
 	{
@@ -31,6 +32,11 @@ void EmptyLinkFunctionForGeneratedCodePongHUD() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ScoreFont_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ScoreFont;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -46,6 +52,16 @@ void EmptyLinkFunctionForGeneratedCodePongHUD() {}
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APongHUD_Statics::NewProp_ScoreFont_MetaData[] = {
+		{ "Category", "Fonts" },
+		{ "ModuleRelativePath", "PongHUD.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APongHUD_Statics::NewProp_ScoreFont = { UE4CodeGen_Private::EPropertyClass::Object, "ScoreFont", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0040000000010001, 1, nullptr, STRUCT_OFFSET(APongHUD, ScoreFont), Z_Construct_UClass_UFont_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APongHUD_Statics::NewProp_ScoreFont_MetaData, ARRAY_COUNT(Z_Construct_UClass_APongHUD_Statics::NewProp_ScoreFont_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APongHUD_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APongHUD_Statics::NewProp_ScoreFont,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_APongHUD_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<APongHUD>::IsAbstract,
 	};
@@ -54,7 +70,7 @@ void EmptyLinkFunctionForGeneratedCodePongHUD() {}
 		DependentSingletons, ARRAY_COUNT(DependentSingletons),
 		0x009002ACu,
 		nullptr, 0,
-		nullptr, 0,
+		Z_Construct_UClass_APongHUD_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UClass_APongHUD_Statics::PropPointers),
 		"Game",
 		&StaticCppClassTypeInfo,
 		nullptr, 0,
@@ -69,7 +85,7 @@ void EmptyLinkFunctionForGeneratedCodePongHUD() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APongHUD, 3077686040);
+	IMPLEMENT_CLASS(APongHUD, 2366275362);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_APongHUD(Z_Construct_UClass_APongHUD, &APongHUD::StaticClass, TEXT("/Script/Pong"), TEXT("APongHUD"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APongHUD);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

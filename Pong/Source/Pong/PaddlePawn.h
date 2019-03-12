@@ -34,6 +34,10 @@ public:
 	void ClearWantsToMoveUp();
 	void ClearWantsToMoveDown();
 
+	FVector GetPaddleBounds() { return PaddleBounds; }
+
+	void SetMovementBounds(float MinBound, float MaxBound);
+
 protected:
 
 	UPROPERTY(EditDefaultsOnly, Category = Movement)
@@ -54,4 +58,13 @@ private:
 
 	UPROPERTY(Transient)
 	bool bWantsToMoveDown;
+
+	UPROPERTY(Transient)
+	float MinMovementBound;
+
+	UPROPERTY(Transient)
+	float MaxMovementBound;
+
+	FVector PaddleBounds;
+
 };

@@ -63,4 +63,7 @@ private:
 
 	UPROPERTY(Transient)
 	TArray<int32> PlayerScores;
+
+	UPROPERTY(Transient)
+	FVector GameBounds;
 };

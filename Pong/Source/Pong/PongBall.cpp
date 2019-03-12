@@ -51,6 +51,9 @@ void APongBall::BeginPlay()
 	MovementDirection = FVector(InitialSpeedX, InitialSpeedY, 0.0f).GetSafeNormal2D();
 	InitialLocation = GetActorLocation();
 	MovementSpeed = DefaultMovementSpeed;
+
+	FVector UnusedVector;
+	GetActorBounds(false, UnusedVector, BallBounds);
 }
 
 // Called every frame
@@ -81,6 +84,12 @@ void APongBall::ResetMovementSpeed()
 	MovementSpeed = DefaultMovementSpeed;
 }
 
+void APongBall::SetMovementBounds(FVector MinBounds, FVector MaxBounds)
+{
+	MinMovementBounds = MinBounds;
+	MaxMovementBounds = MaxBounds;
+}
+
 void APongBall::UpdateBallMovement(float DeltaTime)
 {
 	if (USceneComponent* Root = GetRootComponent())
@@ -101,32 +110,46 @@ void APongBall::HandleBallCollisions()
 			const float YDistanceFromCenter = (CurrentLocation.Y - InitialLocation.Y);
 
 			//Hit Top or Bottom
-			if (FMath::Abs(XDistanceFromCenter) > 800.0f) //TODO: Set it up so that we dont need these Magic Numbers, This is just dependent of the Size of the play Area
+			if (CurrentLocation.X + GetBallBounds().X > MaxMovementBounds.X && MovementDirection.X > 0.0f)
+			{
+				InvertXMovement();
+			}
+			else if (CurrentLocation.X - GetBallBounds().X < MinMovementBounds.X && MovementDirection.X < 0.0f)
 			{
 				InvertXMovement();
 			}
 
-			//Went Past Paddles
-			if (FMath::Abs(YDistanceFromCenter) > 1600.0f) //TODO: Set it up so that we dont need these Magic Numbers, This is just dependent of the Size of the play Area
+			//Went off one of the ends
+			if (CurrentLocation.Y > MaxMovementBounds.Y)
 			{
-				//Resets the Paddles and Ball to Center
 				PongGame->RestartPongGame();
 
-				//Score the miss, for Player 0 or 1
-				PongGame->AddPlayerScore(YDistanceFromCenter > 0.0f ? 0 : 1);
+				//Score the point for Player 0
+				PongGame->AddPlayerScore(0);
+			}
+			else if (CurrentLocation.Y < MinMovementBounds.Y)
+			{
+				PongGame->RestartPongGame();
+
+				//Score the point for Player 1
+				PongGame->AddPlayerScore(1);
 			}
 			else //Check For Paddle Collisions (Potentially Move to Overlap Tests)
 			{
+				const FVector BallLocation = GetActorLocation();
+
 				TArray<APaddlePawn*> PaddleList = PongGame->GetPaddlePawns();
 				for (auto* Paddle : PaddleList)
 				{
-					const FVector BallLocation = GetActorLocation();
-					const FVector PaddleLocation = Paddle->GetActorLocation();
-					const FVector DistanceBetween = BallLocation - PaddleLocation;
+					const FVector BallToPaddleVector = GetActorLocation() - Paddle->GetActorLocation();
+					const FVector Bounds = Paddle->GetPaddleBounds() + GetBallBounds();
 
-					if (FMath::Abs(DistanceBetween.Y) < 50.0f) //TODO: Set it up so that we dont need these Magic Numbers, This is just dependent of the Size of the paddles/balls
+					//Quick check to see if the Ball is Traveling in the right direction, otherwise it could get multiple collisions before it is out of contact.
+					if ((MovementDirection.Y < 0.0f && BallToPaddleVector.Y > 0.0f) ||
+						(MovementDirection.Y > 0.0f && BallToPaddleVector.Y < 0.0f))
 					{
-						if (FMath::Abs(DistanceBetween.X) < 150.0f) //TODO: Set it up so that we dont need these Magic Numbers, This is just dependent of the Size of the paddles/balls
+						if (FMath::Abs(BallToPaddleVector.Y) < Bounds.Y &&
+							FMath::Abs(BallToPaddleVector.X) < Bounds.X)
 						{
 							//Bounce, So Invert Y Movement
 							InvertYMovement();
